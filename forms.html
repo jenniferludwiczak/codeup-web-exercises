@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+   <title>Title</title>
+  </head>
+<body style="background-color:darkgray">
+  <form method="POST" action="https://www.elformo.com/forms/51eef74c-bb34-4ba8-814a-afefc3451109">
+
+      <Header><h1>Register With Us</h1></Header>
+
+      <textarea name="Bio" placeholder="Enter bio here"></textarea>
+
+      <table>
+        <tr>
+          <th><h3>How did you hear about us?</h3></th>
+
+        </tr>
+        <td><input type="radio" name="quiz_question_1" value="a">Billboard</td><br>
+        <td><input type="radio" name="quiz_question_1" value="b">Radio Advertisement</td><br>
+        </tr>
+
+        <tr>
+          <td><input type="radio" name="quiz_question_1" value="c">Internet Advertisement</td><br>
+          <td><input type="radio" name="quiz_question_1" value="d">Other:
+            <textarea name="Other" placeholder=""></textarea></td><br>
+        </tr>
+      </table>
+
+      <br>
+      <br>
+
+        <div>
+
+          <h3>What web browser are you using?</h3>
+          <select name="Web browser type">
+            <option value="Google">Google Chrome</option>
+            <option value="Explorer">Windows Explorer</option>
+            <option value="Safari">Safari</option>
+            <option value="Firefox">Firefox</option>
+            <option value="Other">Other</option>
+          </select>
+
+        </div>
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+        <input type="text" name="email" placeholder="Enter your email address">
+        <input type="password" name="password" placeholder="Password">
+
+      <br>
+      <br>
+      <br>
+      <br>
+
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+          <style>
+              .button {
+                border-radius: 2px;
+                background-color: black;
+                border: none;
+                color: white;
+                text-align: center;
+                font-size: 20px;
+                padding: 10px;
+                width: 100px;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+              }
+
+              .button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                transition: 0.5s;
+              }
+
+              .button span:after {
+                content: '\00bb';
+                position: absolute;
+                opacity: 0;
+                top: 0;
+                right: -20px;
+                transition: 0.5s;
+              }
+
+              .button:hover span {
+                padding-right: 25px;
+              }
+
+              .button:hover span:after {
+                opacity: 1;
+                right: 0;
+              }
+          </style>
+
+          <button class="button"><span>Submit </span></button>
+
+
+       </form>
+
+    <footer>
+   </footer>
+  </body>
+</html>
