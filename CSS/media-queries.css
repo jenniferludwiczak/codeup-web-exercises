@@ -4,13 +4,10 @@ body {
 }
 
 
-
-
 h1 {
     text-align: center;
     font-size: 3em;
 }
-
 
 
 img {
@@ -18,17 +15,14 @@ img {
 }
 
 
-
 nav {
     text-align: center;
 }
 
 
-
 ul {
     padding: 0;
 }
-
 
 
 li {
@@ -37,14 +31,6 @@ li {
     margin-bottom: 10px;
     padding: 0;
 }
-
-
-
-footer {
-    margin-top: 200px;
-    clear: both;
-}
-
 
 
 li>a {
@@ -86,25 +72,36 @@ li>a {
 }
 
 
-
 .main>p {
     padding-right: 40px;
 }
 
 
+footer {
+    margin-top: 200px;
+    clear: both;
+}
+
 
 @media screen and (min-width:768px) {
+
     h1 {
         text-align: left;
         font-size: 2.5em;
         float: left;
     }
+
+
     img {
         margin-top: 40px;
     }
+
+
     nav {
         float: right;
     }
+
+
     li {
         float: left;
         margin-left: 30px;
@@ -112,6 +109,8 @@ li>a {
         padding: 0;
         background-color: white;
     }
+
+
     section {
         float: left;
     }
@@ -122,7 +121,6 @@ li>a {
 
     .sub-section {
         margin-top: 0;
-        width: 33%;
     }
 
 
@@ -139,4 +137,5 @@ li>a {
         margin-top: 200px;
         clear: both;
     }
+
 }
