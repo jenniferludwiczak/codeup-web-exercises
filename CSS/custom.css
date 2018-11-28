@@ -1,0 +1,29 @@
+
+
+.nav {
+    background-color: lightskyblue;
+}
+
+.container {
+    width: 100%;
+}
+
+.mainnav {
+    float: left;
+}
+
+.formnav {
+    float: left;
+}
+
+.class {
+    width: 100%;
+}
+
+.jumbotron {
+
+    height: 50%;
+    width: 100%;
+
+
+}

@@ -12,12 +12,11 @@
 
 .column {
     float: left;
-    padding: 10px;
 }
 
 .box {
     background-color: lightgrey;
-    border: 1px solid black
+    border: 1px solid black;
     height: 30px
 }
 
@@ -79,6 +78,6 @@
     }
 
     .offset-one-half {
-        margin-left: 0%;
+        margin-left: 0;
     }
 }
