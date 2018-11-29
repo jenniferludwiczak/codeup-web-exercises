@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="484056e7-63ac-4c86-a1e0-8e2e74621cd8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../CSS/custom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Images/pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/js.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditionals.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/conditionals.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/external_js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/for_loops.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions.js.webloc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/functions_js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inline_js.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/while.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../loops.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-pizza.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../practice-git" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CSS/grid-layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CSS/grid-layout.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../grid-layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../grid-layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/break_and_continue.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loops.html" beforeDir="false" afterPath="$PROJECT_DIR$/../loops.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +16,7 @@
     <session id="-627366262">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.opened" value="2" />
@@ -46,28 +25,28 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="html" value="9" />
-          <entry key="js" value="3" />
+          <entry key="js" value="4" />
           <entry key="webloc" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="HTML" value="9" />
-          <entry key="JavaScript" value="3" />
+          <entry key="JavaScript" value="4" />
           <entry key="PLAIN_TEXT" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="functions_js" value="9" />
-          <entry key="html" value="424" />
-          <entry key="js" value="2139" />
+          <entry key="html" value="443" />
+          <entry key="js" value="2708" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="424" />
-          <entry key="JavaScript" value="2139" />
+          <entry key="HTML" value="443" />
+          <entry key="JavaScript" value="2708" />
           <entry key="PLAIN_TEXT" value="9" />
         </counts>
       </usages-collector>
@@ -78,8 +57,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../loops.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+            <state relative-caret-position="165">
+              <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -93,11 +72,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/for_loops.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/break_and_continue.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -108,6 +96,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -123,8 +112,9 @@
         <option value="$PROJECT_DIR$/conditionals.html" />
         <option value="$PROJECT_DIR$/conditionals.js" />
         <option value="$PROJECT_DIR$/while.js" />
-        <option value="$PROJECT_DIR$/../loops.html" />
         <option value="$PROJECT_DIR$/for_loops.js" />
+        <option value="$PROJECT_DIR$/../loops.html" />
+        <option value="$PROJECT_DIR$/break_and_continue.js" />
       </list>
     </option>
   </component>
@@ -163,7 +153,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543441710435" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543515600609" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -191,15 +181,16 @@
       <option name="presentableId" value="Default" />
       <updated>1542727198380</updated>
       <workItem from="1542727199596" duration="11447000" />
-      <workItem from="1543434717198" duration="6798000" />
+      <workItem from="1543434717198" duration="9546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18245000" />
+    <option name="totallyTimeSpent" value="20993000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1502146" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -216,7 +207,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -307,13 +298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../loops.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/while.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
@@ -325,6 +309,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../loops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="7" lean-forward="true" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/break_and_continue.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="26" lean-forward="true" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
         </state>
       </provider>
     </entry>
