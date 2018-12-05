@@ -25,14 +25,68 @@
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
 
+    <button id="btn1">What's cool?</button>
+    <button id="btn2">Hello!</button>
+    <button id="btn3">Aaaand...</button>
+    <button id="btn4">Don't Click</button>
+
+
 <script>
     (function() {
         "use strict";
+
         // TODO: Uncomment next line and get the main header element by id
         var mainHeader = document.getElementById("main-header");
 
+
+
+        // --------------------------Buttons------------------------------
+
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
-        mainHeader.innerHTML = "JavaScript is Cool";
+
+
+                    //------------JavaScript Button-----------
+        var javaBtn = function (event) {
+            mainHeader.innerHTML = "JavaScript is Cool!";
+        };
+
+        document.getElementById('btn1').addEventListener('click', javaBtn, false);
+
+                    //-------------Goodbye Button-------------
+        var goodByeBtn = function (event) {
+            subHeader.innerHTML = "Goodbye!"
+        };
+
+        document.getElementById('btn2').addEventListener('click', goodByeBtn, false);
+
+              //-------------Mission Accomplished Button-------------
+        var MABtn = function (event) {
+            subParagraphs[0].innerHTML = "Mission Accomplished Again!"
+        };
+
+        document.getElementById('btn3').addEventListener('click', MABtn, false);
+
+                    //-------------Random Button-------------
+        function updatemycartpage(index, itemId, itemNumber){
+
+            jQuery('#Page').html('<p><center><img src="Images/kip.gif"/></center></p>');
+            $.post("/cart.php", {
+                'hidItemId[]' : itemId,
+                'hidLineId[]' : itemnumber
+
+            },function(data){
+                document.location.href ="/cart.php";
+            });
+
+        var RandomBtn = function (event) {
+
+        };
+
+        document.getElementById('btn4').addEventListener('click', RandomBtn, false);
+
+        //-------------------------------------------------------------------------------
+
+
 
         // TODO: Uncomment the next line and get the sub header element by id
         var subHeader = document.getElementById("sub-header");
