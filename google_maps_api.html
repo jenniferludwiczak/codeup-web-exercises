@@ -25,19 +25,17 @@
         // Set our map options
         var mapOptions = {
             // Set the zoom level
-            zoom: 19,
+            zoom: 15,
 
             // This sets the center of the map at our location
             center: {
-                lat: 29.5787886,
-                lng: -98.5168797
+                lat: 29.426791,
+                lng: -98.489602
             }
         };
 
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-
-        // Include code from previous example
 
         // Set our address to geocode
         var address = "14855 Blanco Rd #110, San Antonio, TX 78216";
@@ -46,10 +44,15 @@
         var geocoder = new google.maps.Geocoder();
 
         // Geocode our address
-        geocoder.geocode({ "address": address }, function(results, status) {
+        geocoder.geocode({ "address": address }, function(results, status)
+
+
+        {
 
             // Check for a successful result
-            if (status == google.maps.GeocoderStatus.OK) {
+            if (status == google.maps.GeocoderStatus.OK)
+
+            {
 
                 // Recenter the map over the address
                 map.setCenter(results[0].geometry.location);
@@ -58,10 +61,28 @@
                 // Show an error message with the status if our request fails
                 alert("Geocoding was not successful - STATUS: " + status);
             }
+
+            //----------------------------------------------Marker-------------------------------------------------
+            var MP = { lat: 29.5787886, lng: -98.5168797 };
+
+            var marker = new google.maps.Marker({
+                position: MP,
+                map: map
+            });
+
+
+
+            var infowindow = new google.maps.InfoWindow({
+                content: "The Melting Pot"
+            });
+
+            infowindow.open(map, marker);
         });
     })();
 </script>
+
+
+
 </body>
 
 
-Redraw === zoom(change it )
