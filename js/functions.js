@@ -76,7 +76,7 @@ function calculateTip(tipPercentage, total) {
     return total * tipPercentage;
 }
 
-var tipAmount + calculateTip(tipPercentage, total);
+var tipAmount, calculateTip(tipPercentage, total);
 var finalTotal = tipAmount + total;
 
 alert("On a $" + " bill, with a " + tipPercentage + " tip, your total is: " +)
