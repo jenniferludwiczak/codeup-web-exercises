@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+    <style>
+        .invisible{
+        display: none;
+    }
+    </style>
+</head>
+
+    <h1>10 facts about parks you probably didn't know.</h1>
+        <body>
+            <script src="js/jquery-2.2.4.js"></script>
+                <dl>
+                    <dt>Fact #1</dt>
+                        <dd class="invisible">Hot Springs remains the smallest national park in the system and the
+                            only park located in an urban setting.</dd>
+                    <br>
+
+                    <dt>Fact #2</dt>
+                        <dd class="invisible">Mackinac National Park was established in 1875 as a resort island in
+                            Lake Huron, Michigan. The park was turned back over to the state in 1895 and became
+                            Michigan's first state park.</dd>
+                    <br>
+
+                    <dt>Fact #3</dt>
+                        <dd class="invisible">Despite Yellowstone becoming the first national park in 1872, the actual
+                            National Park Service wasn't established until 1916, when the government decided there needed
+                            to be an autonomous agency to manage the protected land.</dd>
+                    <br>
+
+                    <dt>Fact #4</dt>
+                        <dd class="invisible">The parks had many different caretakers before the establishment of the
+                            National Park Service, the most prominent being the U.S. Army Cavalry from 1886 to 1916.
+                            During this time, the Cavalry introduced the prototype for today's uniforms, the wide-brimmed
+                            hat being the most recognizable feature. Rangers today still wear these uniforms in homage to
+                            the early protectors of the parks.</dd>
+                    <br>
+
+                    <dt>Fact #5</dt>
+                        <dd class="invisible">In 1933, it was decided that the National Park Service should oversee
+                            multiple types of federally protected land. This reorganization transferred land from the war
+                            department and the forest service over to the NPS, including national monuments, historic sites,
+                            battlefields, lakeshores and recreation areas.</dd>
+                    <br>
+
+                    <dt>Fact #6</dt>
+                        <dd class="invisible">The national park of American Samoa is the only park in which the U.S.
+                            government actually leases the land from local villages on the islands; every 50 years a new
+                            contract has to be negotiated.</dd>
+                    <br>
+
+                    <dt>Fact #7</dt>
+                        <dd class="invisible">There's been a continual debate regarding the appropriateness of a
+                            cafeteria inside Carlsbad Caverns National Park, New Mexico (750 feet underground). Many
+                            people think the institution goes against the NPS code of keeping the parks natural and
+                            limiting in-park commercialism.</dd>
+                    <br>
+
+                    <dt>Fact #8</dt>
+                        <dd class="invisible">In the early years the NPS did very little to keep bears from obtaining
+                            human food. In fact, they encouraged it by setting up viewing areas for visitors to sit and
+                            watch the bears riffle through dumpsters. This led to issues of public safety and problematic
+                            bears. The picture depicts onlookers at the Adirondack Forest Preserve in 1973.
+
+                            The most disturbing of these stories comes from Glacier National Park; during construction of
+                            Going-to-the-Sun Road, deceased horses were thrown over a specific cliff on Saint Mary Lake
+                            where grizzlies waited below. Visitors would sit and watch the activity.</dd>
+                    <br>
+
+                    <dt>Fact #9</dt>
+                        <dd class="invisible">Teddy Roosevelt's wife and mother both died on the same day, Valentine's
+                            Day of 1884. Because of this, Teddy fled to the badlands of North Dakota, an area where he had
+                            once hunted bison. He liked this area because he thought the desolate landscape matched the
+                            condition of his heart and thus offered an adequate place to begin the healing process. This
+                            area was later named Teddy Roosevelt National Park.</dd>
+                    <br>
+
+                    <dt>Fact #10</dt>
+                        <dd class="invisible">Park ranger Roy Sullivan was hit by lightning seven times—and survived
+                            them all—during the course of his career. He worked at Shenandoah National Park between 1942
+                            and 1977. Sullivan claims he was also struck by lightning once as a child, but never
+                            officially documented the account. He is reported as saying his first strike in Shenandoah
+                            was the most painful.</dd>
+                    <br>
+                </dl>
+                <a id="toggler" href="#">Toggle All</a>
+            <script>
+                "use strict";
+
+                $(document).ready(function() {
+                    $('#toggler').click(function() {
+                        $('dd').toggleClass('invisible')
+                    });
+                    $('dt').click(function () {
+                        $(this).next().toggleClass('invisible');
+                        console.log($(this).next())
+                    });
+                });
+            </script>
+        </body>
+</html>
