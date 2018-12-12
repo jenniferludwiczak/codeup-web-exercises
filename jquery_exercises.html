@@ -4,43 +4,76 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-    <h2 id="title">My stuff</h2>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta iste itaque maxime molestias nobis sequi! Cum earum hic ipsa itaque quas quo              recusandae unde. Dicta eius error esse iure!
-        </p>
-            <li class="item">Mac</li>
-            <li class="item">iPhone</li>
-            <li class="item">iPad</li>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae dolores incidunt itaque libero magni maxime minima sit. Aliquid assumenda                   consequuntur deserunt dignissimos ea, enim molestiae officiis quaerat quidem ratione!
-        </p>
-            <div class="important">
-                <h3>NOTICE</h3>
-                <p>This is an important message!</p>
-            </div>
-            <div class="not-important">
-                <h2>Lorem Ipsum</h2>
-                <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
-            </div>
-            <div id="Hello">
-                <h3>Hello...</h3>
-                <h4 id="World">world!</h4>
-            </div>
-                <p class="important">This is also very important.</p>
+    <body>
+        <h1 id="top">Jquery</h1>
+        <h2 id="title">My stuff</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium dicta iste itaque maxime molestias
+                nobis sequi! Cum earum hic ipsa itaque quas quo              recusandae unde. Dicta eius error esse iure!
+            </p>
+                <li class="item">Mac</li>
+                <li class="item">iPhone</li>
+                <li class="item">iPad</li>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci beatae dolores incidunt itaque libero magni
+                maxime minima sit. Aliquid assumenda onsequuntur deserunt dignissimos ea, enim molestiae officiis quaerat quidem ratione!
+            </p>
+                <li class="codeup">Red</li>
+                <li id="codeup">Green</li>
+                <li class="codeup">Blue</li>
+
+                    <div class="important">
+                        <h3>NOTICE</h3>
+                        <p>This is an important message!</p>
+                    </div>
+                    <div class="not-important">
+                        <h2>Lorem Ipsum</h2>
+                        <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>,
+                            quis ut aliquip ex ea commodo.</p>
+                    </div>
+                    <div id="Hello">
+                        <h3>Hello...</h3>
+                        <h4 id="World">world!</h4>
+                    </div>
+            <p class="important">This is also very important.</p>
+
+        <!-------------------------------------------------------------------------------------------------------->
+
         <script src="js/jquery-2.2.4.js"></script>
+
+
         <script>
             "use strict";
             $(document).ready(function(){
-                $('.item').css('color', 'orange');
-                $('p').css('color', 'red');
+                $('.item').css('color', 'red');
+                $('p').css('color', 'blue');
                 $('p, .important').css('backgrounnd-color', '#FF0');
-                $('h2').click(function(){
-
-                    alert("My Stuff");
+                $('.codeup').css('border', '1px solid green');
+                $('li').css('20px');
+                $('li').mouseenter(function() {
+                    $('this').css('background-color', 'red');
                 });
-                alert("Your page has loaded");
+
+                $('li').mouseleave(function() {
+                   $('this').css('background-color', '');
+                });
+
+                $('h2').click(function() {
+                    $(this).css('background-color', 'blue')
+                });
+                $('h1').click(function () {
+                    $('h1').css('background-color', 'red');
+                });
+                $('h2').click(function(){
+                    // alert("My Stuff");
+                });
+                // alert("Your page has loaded");
+                $('p').dblclick(function () {
+                    $(this).css('font-size', '18px');
+                })
+
             });
+
         </script>
     </body>
 </html>

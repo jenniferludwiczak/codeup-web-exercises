@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script src="js/jquery-2.2.4.js"></script>
+<script>
+    "use strict";
+
+
+    $(document).ready(function() {
+        var konami = function () {
+            var konamikeys = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13],
+                started = false,
+                count = 0;
+
+            $(document).keydown(function (e) {
+                var reset = function () {
+                    started = false;
+                    count = 0;
+                    return;
+                };
+
+                var key = e.keyCode;
+                console.log(key);
+
+                if (!started) {
+                    if (key == 38) {
+                        started = true;
+                    }
+                }
+
+                if (started) {
+                    if (konamikeys[count] == key) {
+                        count++;
+                    } else {
+                        reset();
+                    }
+
+                    if (count == 11) {
+                        alert('Konami code entered!');
+                        reset();
+                    }
+                } else {
+                    reset();
+                }
+            });
+        };
+        konami()
+    });
+
+
+
+</script>
+</body>
+</html>
