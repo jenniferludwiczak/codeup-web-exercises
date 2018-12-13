@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<a id="something" href="http://localhost:63342/codeup-web-exercises/ajax-store.html?_ijt=3ue8nifmit168nsjoi0s9bmbbq">Refresh</a>
+<script src="CSS/ajax-store.css"></script>
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Categories</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+    "use strict";
+
+    $(document).ready(function () {
+        $.ajax("data/inventory.json")
+            .done(function (data) {
+                data.forEach(function(element){
+                    $('#insertProducts').append('<tr>' +
+                        '<td>' + element.title +
+                        '<td>' + element.quantity +
+                        '<td>' + element.categories +
+                        '<td>' + element.price);
+                     });
+                        console.log(data);
+                 });
+            $('#something').click(function() {
+                location.reload();
+        });
+    });
+
+</script>
+
+</body>
+</html>

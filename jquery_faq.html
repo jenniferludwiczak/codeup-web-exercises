@@ -11,6 +11,13 @@
 </head>
     <body>
         <script src="js/jquery-2.2.4.js"></script>
+
+        <div>
+            <span>x</span>
+            <h1>Would you like to sign up for our newsletter?</h1>
+        </div>
+            <h2>Register here!</h2>
+
         <h1>FAQ's</h1>
                 <dl>
                     <dt>Fact #1</dt>
@@ -107,35 +114,44 @@
                         <li>The great divide runs through the land.</li>
                         <li>Bighorn sheep are the symbol of the park.</li>
                     </ul>
-
             <a id="toggler" href="#">Toggle All</a>
             <button id="highlighter" href="#">Highlight Things</button>
         <script>
             "use strict";
 
             $(document).ready(function() {
-                $('#toggler').click(function() {
+
+                $('h2').hide(function () {
+                    $('h2').fadeIn(800)
+                });
+                $('#toggler').click(function () {
                     $('dd').toggleClass('invisible')
                 });
                 $('dt').click(function () {
                     $(this).next().toggleClass('invisible')
                     console.log($(this).next())
                 });
-            });
-        </script>
-        <script>
-            $('#highlighter').click(function () {
-               $('ul').each(function () {
-                  $(this).children().last().css('background-color', 'yellow')
-             });
+                $('div').click(function () {
+                    $(this).hide()
+                });
+                $('ul').hide()
                 $('h3').click(function () {
-                    $(this).next().children().css('font-weight', 'bold')
+                    $('ul').slideToggle()
+                });
+                $('#highlighter').click(function () {
+                    $('ul').each(function () {
+                        $(this).children().last().css('background-color', 'yellow')
+                    });
+                    $('h3').click(function () {
+                        $(this).next().children().css('font-weight', 'bold')
                     })
                 });
-            $('ul').click(function () {
-                $(this).children().first().css('color', 'blue')
-            })
-            // $('body').css('background-color', 'black')
+                $('ul').click(function () {
+                    $(this).children().first().css('color', 'blue')
+                })
+                // $('body').css('background-color', 'black', ')
+                });
+            $('body').css('background-image', 'url("http://gotravelaz.com/wp-content/uploads/images/Glacier_National_Park.jpg")', 'background-size: auto');
         </script>
     </body>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Blog</title>
+</head>
+    <body>
+         <div id="posts"></div>
+            <script src="js/jquery-2.2.4.js"></script>
+            <script>
+                "use strict";
+
+                $(document).ready(function () {
+                    $.ajax("data/blog.json")
+                    .done(function (data) {
+                        data.forEach(function(element){
+                        $('#posts').append(
+                            element.title +
+                            element.content +
+                            element.categories +
+                            element.date + '<br>' + '<br>');
+                        });
+                    });
+                });
+            </script>
+    </body>
+</html>
