@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map</title>
+</head>
+    <body>
+
+    <div class="container1">
+        <table>
+            <thead>
+                <tr>
+                    <th>Day 1</th>
+                </tr>
+            </thead>
+            <tbody id="d1"></tbody>
+        </table>
+    </div>
+
+    <div class="container2">
+        <table>
+            <thead>
+                <tr>
+                    <th>Day 2</th>
+                </tr>
+            </thead>
+            <tbody id="d2"></tbody>
+        </table>
+    </div>
+
+    <div class="container3">
+        <table>
+            <thead>
+                <tr>
+                    <th>Day 3</th>
+                </tr>
+            </thead>
+            <tbody id="d3"></tbody>
+        </table>
+    </div>
+
+
+    <link rel="stylesheet" href="CSS/weather_map.css">
+        <script src="js/jquery-2.2.4.js"></script>
+            <script src=""></script>
+            <script>
+                "use strict";
+                    $(document).ready(function () {
+                        $.ajax("https://api.openweathermap.org/data/2.5/forecast?lat=18.17&lon=-96.12&units=imperial&APPID=a06bb98630b2be2fa345eacf0ea7cfee")
+                            .done(function (forecast) {
+                                console.log(forecast);
+                                    var index =0;
+                                forecast.list.forEach(function (forecast, index) {
+
+                                        var weather = "";
+                                        weather += '<td>' + forecast.main.temp_max + "°" + "/" + forecast.main.temp_min + "°" + '</td>';
+                                        weather += '<td>' + "<strong>Clouds: </strong>" + forecast.weather[0].description + '</td>';
+                                        weather += '<td>' + "<strong>Humidity: </strong>" + forecast.main.humidity + '</td>';
+                                        weather += '<td>' + "<strong>Wind: </strong>" + forecast.wind.speed + '</td>';
+                                        weather += '<td>' + "<strong>Pressure: </strong>" + forecast.main.pressure + '</td>';
+                                        $('#d1').html(weather);
+                                        index += 8;
+                                    })
+
+                                    // else if (index === [8]) {
+                                    //     weather += '<td>' + forecast.main.temp_max + "°" + "/" + forecast.main.temp_min + "°" + '</td>';
+                                    //     weather += '<td>' + "<strong>Clouds: </strong>" + forecast.weather[0].description + '</td>';
+                                    //     weather += '<td>' + "<strong>Humidity: </strong>" + forecast.main.humidity + '</td>';
+                                    //     weather += '<td>' + "<strong>Wind: </strong>" + forecast.wind.speed + '</td>';
+                                    //     weather += '<td>' + "<strong>Pressure: </strong>" + forecast.main.pressure + '</td>';
+                                    //     $('#d2').html(weather);
+                                    // }
+                                    //
+                                    // else if (index === [16]) {
+                                    //     weather += '<td>' + forecast.main.temp_max + "°" + "/" + forecast.main.temp_min + "°" + '</td>';
+                                    //     weather += '<td>' + "<strong>Clouds: </strong>" + forecast.weather[0].description + '</td>';
+                                    //     weather += '<td>' + "<strong>Humidity: </strong>" + forecast.main.humidity + '</td>';
+                                    //     weather += '<td>' + "<strong>Wind: </strong>" + forecast.wind.speed + '</td>';
+                                    //     weather += '<td>' + "<strong>Pressure: </strong>" + forecast.main.pressure + '</td>';
+                                    //     $('#d3').html(weather);
+                                //     }
+                                // })
+                            })
+                    })
+
+            </script>
+    </body>
+</html>
