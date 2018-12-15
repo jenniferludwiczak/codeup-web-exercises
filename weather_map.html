@@ -87,41 +87,42 @@
 <!-----------------------------------------------------------------Container/Table------------------------------------------------------------------------>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-4">
-                    <table>
-                    <thead>
-                        <tr>
-                            <th>Day 1</th>
-                        </tr>
-                    </thead>
-                    <tbody id="d1"></tbody>
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title">Day 1</thead>
+                        <tbody class="card-text" id="d1"></tbody>
                     </table>
+                </div>
             </div>
+        </div>
             <div class="col-4">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Day 2</th>
-                        </tr>
-                    </thead>
-                    <tbody id="d2"></tbody>
-                </table>
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title">Day 2</thead>
+                        <tbody class="card-text" id="d2"></tbody>
+                    </table>
+                </div>
             </div>
-            <br>
+        </div>
             <div class="col-4">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Day 3</th>
-                        </tr>
-                    </thead>
-                    <tbody id="d3"></tbody>
-                </table>
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title">Day 3</thead>
+                        <tbody class="card-text" id="d3"></tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+
     <div id="cityName"></div>
     <label for="latitude">Enter Latitude</label><input type="text" id="latitude">
     <label for="longitude">Enter Longitude</label><input type="text" id="longitude">
@@ -130,10 +131,89 @@
 
     <link rel="stylesheet" href="CSS/weather_map.css">
         <script src="js/jquery-2.2.4.js"></script>
-            <script>
+
+
+<!-----------------------------------------------------------------------Map------------------------------------------------------------------------------->
+
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnLLJypNck20CrZxRIQaA6mvVTIdAOrQs&sensor=true"></script>
+                <div id="map-canvas"></div>
+                <style type="text/css">
+                    #map-canvas {
+                        width: 770px;
+                        height: 481px;
+                    }
+                </style>
+
+                <script type="text/javascript">
                 "use strict";
 
+                var mapOptions = {
+                    // Set the zoom level
+                    zoom: 15,
 
+                    // This sets the center of the map at our location
+                    center: {
+                        lat: 29.426791,
+                        lng: -98.489602
+                    },
+
+                     styles: [{"featureType":"all","elementType":"geometry","stylers":[{"visibility":"off"}]},
+                                {"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},
+                                {"featureType":"landscape","elementType":"all","stylers":[{"color":"#ffffff"},
+                                {"visibility":"on"}]},{"featureType":"landscape.natural.landcover","elementType":
+                                "geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural." +
+                                "landcover","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":
+                                "#c5c0c0"}]},{"featureType":"landscape.natural.landcover","elementType":"labels." +
+                                "text." + "fill","stylers":[{"color":"#ff0000"},{"visibility":"on"}]},{"featureType":
+                                "landscape." + "natural.landcover","elementType":"labels.text.stroke","stylers":
+                                [{"visibility":"off"}]}, {"featureType":"road","elementType":"geometry","stylers":
+                                [{"visibility":"on"},{"color":"#000000"}]}]
+                    };
+
+                // Render the map
+                var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+                // Set our address to geocode
+                var address = "600 Navarro St.";
+
+                // Init geocoder object
+                var geocoder = new google.maps.Geocoder();
+
+                // Geocode our address
+                geocoder.geocode({ "address": address }, function(results, status)
+
+                {
+
+                    // Check for a successful result
+                    if (status == google.maps.GeocoderStatus.OK)
+
+                    {
+
+                        // Recenter the map over the address
+                        map.setCenter(results[0].geometry.location);
+                    } else {
+
+                        // Show an error message with the status if our request fails
+                        alert("Geocoding was not successful - STATUS: " + status);
+                    }
+
+        //-----------------------------------Marker---------------------------------------//
+
+                    var CU = { lat: 29.426791, lng: -98.489602 };
+
+
+                    var marker = new google.maps.Marker({
+                        position: CU,
+                        map: map
+                    });
+
+                    var infowindow = new google.maps.InfoWindow({
+                        content: "San Antonio"
+                    });
+
+                    infowindow.open(map, marker);
+                });
 
 
 //----------------------------------------------------------------Current Location----------------------------------------------------------------------//
@@ -223,6 +303,8 @@
 
                         });
 
+
+
                     });
 
             </script>
@@ -230,3 +312,4 @@
       </body>
 
 </html>
+

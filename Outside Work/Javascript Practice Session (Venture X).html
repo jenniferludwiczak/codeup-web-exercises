@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript</title>
+</head>
+    <body>
+        <script>
+
+//----------------------------------------------------Level 1--------------------------------------------------------//
+
+            var names = ['Billy', 'Sally', 'Clara', 'Jeff'];
+
+                function name(names){
+                    var random = Math.floor(Math.random()*4);
+                    return names[random]
+                }
+
+                    console.log(name(names));
+
+//----------------------------------------------------Level 2--------------------------------------------------------//
+
+            // var propName = {
+            //     property: names[name];
+            //     value:
+            // }
+
+//----------------------------------------------------Level 3--------------------------------------------------------//
+
+
+
+//--------------------------------------------------Stability--------------------------------------------------------//
+
+            function isStable(reindeer) {
+                return reindeer%2 === 0
+            }
+
+                console.log(isStable());
+
+//------------------------------------------------Sick Reindeer-------------------------------------------------------//
+
+            function sickCount(reindeer) {
+                return Math.floor(Math.random()*reindeer)
+            }
+
+                console.log(sickCount());
+
+        </script>
+    </body>
+</html>
