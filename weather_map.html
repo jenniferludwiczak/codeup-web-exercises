@@ -3,24 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/weather_map.css">
+
+</head>
+
+
+<!---------------------------------------------------------------------Cards/Table-------------------------------------------------------------------------->
+
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title dayOne"></thead>
+                        <tbody class="card-text" id="d1"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title dayTwo"></thead>
+                        <tbody class="card-text" id="d2"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+            <div class="col-4">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead class="card-title dayThree"></thead>
+                        <tbody class="card-text" id="d3"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+    <div id="cityName"></div>
+    <label for="latitude">Enter Latitude</label><input type="text" id="latitude">
+    <label for="longitude">Enter Longitude</label><input type="text" id="longitude">
+    <button type="submit" id="submit">Search</button>
+
+
+    <script src="js/jquery-2.2.4.js"></script>
 
 
 <!------------------------------------------------------------------Forecast Day-------------------------------------------------------------------------->
 
 
+
                 <script id="day">
 
-                    (function() {
-                    var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 
-                    Date.prototype.getDayName = function() {
-                    return days[ this.getDay() ];
-                    };
+                    (function() {
+                        var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+
+                        Date.prototype.getDayName = function() {
+                            return days[ this.getDay() ];
+                        };
                     })();
+
+
 
                     var now = new Date();
 
                     var day = now.getDayName();
+
+                    $(".dayOne").text(day);
+                    $(".dayTwo").text(day);
+                    $(".dayThree").text(day);
 
 
                     document.write("Today's Date: " + day + ",");
@@ -36,7 +99,7 @@
 
                     var today = new Date();
                     var dd = today.getDate();
-                    var mm = today.getMonth()+1; //January is 0!
+                    var mm = today.getMonth()+1;
                     var yyyy = today.getFullYear();
 
                     if(dd<10) {
@@ -56,81 +119,29 @@
                 </script>
 
 
-
 <!---------------------------------------------------------------------Time------------------------------------------------------------------------------->
 
 
-                <script id="time">
+                <!--<script id="time">-->
 
-                    function time() {
+                    <!--function time() {-->
 
-                        var h = new Date();
-                        document.getElementById("demo").innerHTML = h.getHours();
+                        <!--var h = new Date();-->
+                        <!--document.getElementById("demo").innerHTML = h.getHours();-->
 
-                        var m = new Date();
-                        document.getElementById("demo").innerHTML = m.getMinutes();
+                        <!--var m = new Date();-->
+                        <!--document.getElementById("demo").innerHTML = m.getMinutes();-->
 
-                        var s = new Date();
-                        document.getElementById("demo").innerHTML = s.getSeconds();
+                        <!--var s = new Date();-->
+                        <!--document.getElementById("demo").innerHTML = s.getSeconds();-->
 
-                        }
+                        <!--}-->
 
-                        document.write(h + ":" + m + ":" + s);
+                        <!--document.write(h + ":" + m + ":" + s);-->
 
-                        console.log(time);
+                        <!--console.log(time);-->
 
-                </script>
-
-</head>
-
-
-<!-----------------------------------------------------------------Container/Table------------------------------------------------------------------------>
-
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table">
-                            <thead class="card-title">Day 1</thead>
-                        <tbody class="card-text" id="d1"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table">
-                            <thead class="card-title">Day 2</thead>
-                        <tbody class="card-text" id="d2"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-            <div class="col-4">
-                <div class="card">
-                    <div class="card-body">
-                        <table class="table">
-                            <thead class="card-title">Day 3</thead>
-                        <tbody class="card-text" id="d3"></tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <div id="cityName"></div>
-    <label for="latitude">Enter Latitude</label><input type="text" id="latitude">
-    <label for="longitude">Enter Longitude</label><input type="text" id="longitude">
-    <button type="submit" id="submit">Search</button>
-
-
-    <link rel="stylesheet" href="CSS/weather_map.css">
-        <script src="js/jquery-2.2.4.js"></script>
+                <!--</script>-->
 
 
 <!-----------------------------------------------------------------------Map------------------------------------------------------------------------------->
