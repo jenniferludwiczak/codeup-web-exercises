@@ -18,7 +18,7 @@
                 <div class="card">
                     <div class="card-body">
                         <table class="table">
-                            <thead class="card-title dayOne"></thead>
+                            <th class="card-title dayOne"></th>
                         <tbody class="card-text" id="d1"></tbody>
                     </table>
                 </div>
@@ -28,7 +28,7 @@
                 <div class="card">
                     <div class="card-body">
                         <table class="table">
-                            <thead class="card-title dayTwo"></thead>
+                            <th class="card-title dayTwo"></th>
                         <tbody class="card-text" id="d2"></tbody>
                     </table>
                 </div>
@@ -38,7 +38,7 @@
                 <div class="card">
                     <div class="card-body">
                         <table class="table">
-                            <thead class="card-title dayThree"></thead>
+                            <th class="card-title dayThree"></th>
                         <tbody class="card-text" id="d3"></tbody>
                     </table>
                 </div>
@@ -51,21 +51,22 @@
 <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
+    <br>
     <div id="cityName"></div>
     <label for="latitude">Enter Latitude</label><input type="text" id="latitude">
     <label for="longitude">Enter Longitude</label><input type="text" id="longitude">
     <button type="submit" id="submit">Search</button>
-
-
     <script src="js/jquery-2.2.4.js"></script>
+    <script type='text/javascript' src='https://darksky.net/widget/default-small/42.360082,-71.05888/us12/en.js?width=
+                    100%&height=70&title=Full Forecast&textColor=333333&bgColor=transparent&transparency=true&skyColor=
+                    undefined&fontFamily=Trebuchet MS&customFont=&units=us'></script>
 
 
 <!------------------------------------------------------------------Forecast Day-------------------------------------------------------------------------->
 
 
-
+            <div id="date">
                 <script id="day">
-
 
                     (function() {
                         var days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -75,8 +76,6 @@
                         };
                     })();
 
-
-
                     var now = new Date();
 
                     var day = now.getDayName();
@@ -84,7 +83,6 @@
                     $(".dayOne").text(day);
                     $(".dayTwo").text(day);
                     $(".dayThree").text(day);
-
 
                     document.write("Today's Date: " + day + ",");
                     console.log(day);
@@ -95,28 +93,29 @@
 <!---------------------------------------------------------------------Date----------------------------------------------------------------------------->
 
 
-                <script id="date">
+                    <script>
 
-                    var today = new Date();
-                    var dd = today.getDate();
-                    var mm = today.getMonth()+1;
-                    var yyyy = today.getFullYear();
+                        var today = new Date();
+                        var dd = today.getDate();
+                        var mm = today.getMonth()+1;
+                        var yyyy = today.getFullYear();
 
-                    if(dd<10) {
-                        dd = '0'+dd
-                    }
+                        if(dd<10) {
+                            dd = '0'+dd
+                        }
 
-                    if(mm<10) {
-                        mm = '0'+mm
-                    }
+                        if(mm<10) {
+                            mm = '0'+mm
+                        }
 
-                    today = mm + '/' + dd + '/' + yyyy;
+                        today = mm + '/' + dd + '/' + yyyy;
 
-                    document.write(today);
+                        document.write(today);
 
-                    console.log(today);
+                        console.log(today);
 
-                </script>
+                    </script>
+                </div>
 
 
 <!---------------------------------------------------------------------Time------------------------------------------------------------------------------->
@@ -147,7 +146,8 @@
 <!-----------------------------------------------------------------------Map------------------------------------------------------------------------------->
 
 
-                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnLLJypNck20CrZxRIQaA6mvVTIdAOrQs&sensor=true"></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnLLJypNck20CrZxRIQaA6mvVTIdAOrQs&sensor=true"
+                        src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
                 <div id="map-canvas"></div>
                 <style type="text/css">
                     #map-canvas {
@@ -169,18 +169,43 @@
                         lng: -98.489602
                     },
 
-                     styles: [{"featureType":"all","elementType":"geometry","stylers":[{"visibility":"off"}]},
-                                {"featureType":"all","elementType":"labels","stylers":[{"visibility":"off"}]},
-                                {"featureType":"landscape","elementType":"all","stylers":[{"color":"#ffffff"},
-                                {"visibility":"on"}]},{"featureType":"landscape.natural.landcover","elementType":
-                                "geometry","stylers":[{"visibility":"on"}]},{"featureType":"landscape.natural." +
-                                "landcover","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":
-                                "#c5c0c0"}]},{"featureType":"landscape.natural.landcover","elementType":"labels." +
-                                "text." + "fill","stylers":[{"color":"#ff0000"},{"visibility":"on"}]},{"featureType":
-                                "landscape." + "natural.landcover","elementType":"labels.text.stroke","stylers":
-                                [{"visibility":"off"}]}, {"featureType":"road","elementType":"geometry","stylers":
-                                [{"visibility":"on"},{"color":"#000000"}]}]
-                    };
+                     styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":
+                              "#dedede"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke",
+                              "stylers":[{"visibility":"off"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all",
+                              "elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative",
+                              "elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":
+                              "administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":
+                              17},{"weight":1.2}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":
+                              "#000000"},{"lightness":20},{"gamma":"0.56"}]},{"featureType":"poi","elementType":"geometry",
+                              "stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi","elementType":"geometry." +
+                              "stroke","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"poi","elementType":
+                              "labels.text.fill","stylers":[{"weight":"10.00"},{"invert_lightness":true},{"gamma":"7.24"},
+                              {"lightness":"60"},{"saturation":"66"}]},{"featureType":"poi","elementType":"labels.text.stroke",
+                              "stylers":[{"color":"#ffffff"},{"invert_lightness":true}]},{"featureType":"poi","elementType":
+                              "labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"poi.attraction","elementType":
+                              "all","stylers":[{"visibility":"off"}]},{"featureType":"poi.business","elementType":"all",
+                              "stylers":[{"visibility":"off"}]},{"featureType":"poi.government","elementType":"all","stylers":
+                              [{"visibility":"off"}]},{"featureType":"poi.medical","elementType":"all","stylers":[{"visibility":
+                              "off"}]},{"featureType":"poi.park","elementType":"all","stylers":[{"visibility":"off"}]},
+                              {"featureType":"poi.place_of_worship","elementType":"all","stylers":[{"visibility":"off"}]},
+                              {"featureType":"poi.school","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":
+                              "poi.sports_complex","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":
+                              "#d2cece"},{"invert_lightness":true},{"weight":"10.00"}]},{"featureType":"poi.sports_complex",
+                              "elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"}]},
+                              {"featureType":"poi.sports_complex","elementType":"labels.text","stylers":[{"visibility":
+                              "simplified"}]},{"featureType":"poi.sports_complex","elementType":"labels.text.fill","stylers":
+                              [{"visibility":"on"},{"color":"#ff0000"}]},{"featureType":"poi.sports_complex","elementType":
+                              "labels.text.stroke","stylers":[{"gamma":"10.00"},{"invert_lightness":true},{"weight":"10.00"},
+                              {"color":"#ffffff"},{"visibility":"off"}]},{"featureType":"poi.sports_complex","elementType":
+                              "labels.icon","stylers":[{"visibility":"on"},{"weight":"5.10"},{"gamma":"0.00"},{"hue":"#ff0000"}]},
+                              {"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},
+                              {"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":
+                              [{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial",
+                              "elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":
+                              "road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},
+                              {"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},
+                              {"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+                };
 
                 // Render the map
                 var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
@@ -208,8 +233,42 @@
                         // Show an error message with the status if our request fails
                         alert("Geocoding was not successful - STATUS: " + status);
                     }
+                })
+
+                    // var map;
+                    // function initialize() {
+                    //     var myLatlng = new google.maps.LatLng(<?=$decimalValueLon?>,<?=$decimalValueLat?>);
+                    //     var myOptions = {
+                    //         zoom: 17,
+                    //         center: myLatlng,
+                    //         mapTypeId: google.maps.MapTypeId.SATELLITE
+                    //     };
+                    //
+                    //     map = new google.maps.Map(document.getElementById('map_canvas'),
+                    //         myOptions);
+                    //
+                    //     // marker STARTS
+                    //     var marker = new google.maps.Marker({
+                    //         position: myLatlng,
+                    //         title:"Click to view info!"
+                    //     });
+                    //     marker.setMap(map);
+                    //     // marker ENDS
+                    //
+                    //     // info-window STARTS
+                    //     var infowindow = new google.maps.InfoWindow({ content: "<div class='map_bg_logo'><span style='color:#1270a2;'><b><?=$row->bridge_name?></b> (<?=$row->bridge_no?>)</span><div style='border-top:1px dotted #ccc; height:1px;  margin:5px 0;'></div><span style='color:#555;font-size:11px;'><b>Length: </b><?=$row->bridge_length?> meters</span></div>" });
+                    //     google.maps.event.addListener(marker, 'click', function() {
+                    //         infowindow.open(map,marker);
+                    //     });
+                    //     // info-window ENDS
+                    // }
+                    //
+                    // google.maps.event.addDomListener(window, 'load', initialize);
+                </script>`
+
 
         //-----------------------------------Marker---------------------------------------//
+
 
                     var CU = { lat: 29.426791, lng: -98.489602 };
 
@@ -314,8 +373,6 @@
 
                         });
 
-
-
                     });
 
             </script>
@@ -323,4 +380,3 @@
       </body>
 
 </html>
-

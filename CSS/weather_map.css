@@ -1,15 +1,30 @@
-/*.container1 {*/
-    /*float: left;*/
-/*}*/
-
-/*.container2 {*/
-    /*float: left;*/
-/*}*/
-
-/*.container3 {*/
-    /*float: left;*/
-/*}*/
-
 th {
     text-align: center;
+}
+
+#d1, #d2, #d3 {
+    text-align: center;
+}
+
+#map-canvas {
+    position: center;
+}
+
+body {
+    background-color: black;
+}
+
+label {
+    color: white;
+}
+
+#day {
+    color: white;
+}
+
+#date {
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin-bottom: 50px;
 }
