@@ -1,6 +1,22 @@
-// Create a function that accepts a github username, and returns a promise that resolves with the date of the last commit that user made. Reference the github api documentation to achieve this.
+const wait = number => {
+    return new Promise((resolve, reject) => {
+        if (number > 0) {
+            setTimeout(function () {
+                console.log(`You'll see this after ${number} seconds!`)
+            },number *1000);
+            resolve();
+        } else {
+            reject(console.log("This rejected!"));
+        }
+    });
+};
 
-const API_TOKEN = '3235f0a877d0e53652c6d0167c95bdff89d2a930';
+wait(2);
+wait(5);
+
+
+
+const API_TOKEN = 'ebdd55e5b35c38326d1fbg439e624e5335f547fc';
 
 const url = 'https://api.github.com/users/jenniferludwiczak/events';
 
@@ -32,7 +48,31 @@ fetch(url, {headers: {'Authorization': `token ${API_TOKEN}`}})
     .then(printDate);
 
 
+const encrypt = (input) => {
+    if(typeof(input) != "string"){
+        return undefined;
+    }
+    let shift = new TextEncoder("utf-8").encode(input);
+    for(let i = 0; i < shift.length; i++){
+        shift[i] += 1;
+    }
 
+    const result = new TextDecoder("utf-8").decode(shift);
+    return result;
+}
+
+const decrypt = (input) => {
+    if(typeof(input) != "string"){
+        return undefined;
+    }
+    let shift = new TextEncoder("utf-8").encode(input);
+    for(let i = 0; i < shift.length; i++){
+        shift[i] -= 1;
+    }
+
+    const result = new TextDecoder("utf-8").decode(shift);
+    return result;
+}
 
 
 
